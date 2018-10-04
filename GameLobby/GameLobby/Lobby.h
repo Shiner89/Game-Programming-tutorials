@@ -1,0 +1,22 @@
+#pragma once
+#ifndef LOBBY_H
+#define LOBBY_H
+#include "Player.h"
+
+class Lobby
+{
+	friend ostream& operator<<(ostream& os, const Lobby& aLobby);
+
+public:
+	Lobby();
+	~Lobby();
+	void AddPlayer();
+	void RemovePlayer();
+	void Clear();
+	void ListPlayer();
+
+private:
+	Player* m_pHead;
+};
+
+#endif // !LOBBY_H
