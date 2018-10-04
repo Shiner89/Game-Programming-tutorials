@@ -13,6 +13,7 @@ int main()
 
 	Critter crit("Poochie", 5);
 	crit.Greet();
+	cout << "About to call a copy constructer \n";
 	testCopyConstructor(crit);
 	crit.Greet();
 	cout << endl;
