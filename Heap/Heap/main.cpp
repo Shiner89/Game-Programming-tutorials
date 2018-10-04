@@ -23,6 +23,7 @@ int main()
 
 	cout << "Freeing memory pointed to by pHeap2.\n\n";
 	delete pHeap2;
+	leak1();
 
 	//get rid of dangling pointers
 	pHeap = 0;
@@ -34,13 +35,25 @@ int main()
 
 int* intOnHeap()
 {
+	
 	int* pTemp = new int(20);
 	return pTemp;
 }
 
 void leak1()
 {
+	// the new command allocates memory
+	// for every new command you must delete it
 	int* drip1 = new int(30);
+	cout << "Mem address of drip1 is: " << &drip1 << " mem location that it contains is: " << drip1 << endl;
+	cout << "value that drip1 contains: " << *drip1 << endl;
+	cout << "Now we delete drip one" << endl;
+	delete drip1;
+	//mem location still has something in it
+	cout << "Mem address of drip1 is: " << &drip1 << " mem location that it contains is: " << drip1 << endl;
+	//should set drip1 to 0 to get ride of the mem location
+	drip1 = 0;
+	cout << "Mem address of drip1 is: " << &drip1 << " mem location that it contains is: " << drip1 << endl;
 }
 
 void leak2()
