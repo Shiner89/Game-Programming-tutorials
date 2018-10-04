@@ -24,6 +24,7 @@ int main()
 	cout << "Freeing memory pointed to by pHeap2.\n\n";
 	delete pHeap2;
 	leak1();
+	leak2();
 
 	//get rid of dangling pointers
 	pHeap = 0;
@@ -42,6 +43,7 @@ int* intOnHeap()
 
 void leak1()
 {
+	cout << "\n\n\n";
 	// the new command allocates memory
 	// for every new command you must delete it
 	int* drip1 = new int(30);
@@ -58,8 +60,28 @@ void leak1()
 
 void leak2()
 {
+	cout << "\n\n\n";
 	int* drip2 = new int(50);
+	cout << "int* drip2 = new int(50); \n";
+	cout << "Mem address of drip2 is: " << &drip2 << " mem location that it contains is: " << drip2 << endl;
+	cout << "value that drip2 contains: " << *drip2 << endl;
+	
 	drip2 = new int(100);
+	cout << " drip2 = new int(100); \n";
+	cout << "Mem address of drip2 is: " << &drip2 << " mem location that it contains is: " << drip2 << endl;
+	cout << "value that drip2 contains: " << *drip2 << endl;
+
+	// deleting  does not get rid of the mem location
 	delete drip2;
+	cout << "deleting drip2 \n";
+	cout << "Mem address of drip2 is: " << &drip2 << " mem location that it contains is: " << drip2 << endl;
+
+	// needs to be set to 0
+	drip2 = 0;
+	cout << "setting drip2 to 0 \n";
+	cout << "Mem address of drip2 is: " << &drip2 << " mem location that it contains is: " << drip2 << endl;
 }
+
+
+
 
