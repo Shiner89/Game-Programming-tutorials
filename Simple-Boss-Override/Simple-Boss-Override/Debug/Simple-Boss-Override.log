@@ -1,0 +1,8 @@
+﻿  Boss.cpp
+  Enemy.cpp
+  Main.cpp
+  Generating Code...
+Enemy.obj : error LNK2005: "public: __thiscall Enemy::Enemy(void)" (??0Enemy@@QAE@XZ) already defined in Boss.obj
+Main.obj : error LNK2005: "public: __thiscall Boss::Boss(void)" (??0Boss@@QAE@XZ) already defined in Boss.obj
+Main.obj : error LNK2005: "public: __thiscall Enemy::Enemy(void)" (??0Enemy@@QAE@XZ) already defined in Boss.obj
+C:\gp\tutorials\Game-Programming-tutorials\Simple-Boss-Override\Debug\Simple-Boss-Override.exe : fatal error LNK1169: one or more multiply defined symbols found
