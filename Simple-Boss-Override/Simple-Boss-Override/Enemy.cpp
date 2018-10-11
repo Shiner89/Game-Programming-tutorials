@@ -1,14 +1,16 @@
 #include "Enemy.h"
 
 
-
-Enemy::Enemy() :
-	m_Damage(10)
+Enemy::Enemy(int damage) :
+	m_Damage(damage)
 {}
+
+void Enemy::Taunt() const
+{
+	cout << "The enemy says he will fight you.\n";
+}
 
 void Enemy::Attack() const
 {
-	cout << "Attack inflicts " << m_Damage << " damage points!\n";
+	cout << "Attack! Inflicts " << m_Damage << " damage points.";
 }
-
-	

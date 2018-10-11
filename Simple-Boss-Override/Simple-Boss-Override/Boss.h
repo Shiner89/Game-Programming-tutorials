@@ -6,13 +6,10 @@
 class Boss : public Enemy
 {
 public:
-	int m_DamageMultiplier;
-
-	Boss();
-	void SpecialAttack() const;
-
+	Boss(int damage = 30);
+	void virtual Taunt() const;      //optional use of keyword virtual
+	void virtual Attack() const;     //optional use of keyword virtual
 };
-
 
 
 #endif // !1

@@ -4,15 +4,16 @@
 
 int main()
 {
-	cout << "Creating an enemy.\n";
-	Enemy enemy1;
-	enemy1.Attack();
+	cout << "Enemy object:\n";
+	Enemy anEnemy;
+	anEnemy.Taunt();
+	anEnemy.Attack();
 
-	cout << "\nCreating a boss.\n";
-	Boss boss1;
-	boss1.Attack();
-	boss1.SpecialAttack();
+	cout << "\n\nBoss object:\n";
+	Boss aBoss;
+	aBoss.Taunt();
+	aBoss.Attack();
+
 	cin.get();
 	return 0;
 }
-

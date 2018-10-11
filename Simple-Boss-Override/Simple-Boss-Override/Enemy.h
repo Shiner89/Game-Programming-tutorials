@@ -8,10 +8,12 @@ using namespace std;
 class Enemy
 {
 public:
-	int m_Damage;
+	Enemy(int damage = 10);
+	void virtual Taunt() const;     //made virtual to be overridden
+	void virtual Attack() const;    //made virtual to be overridden
 
-	Enemy();
-	void Attack() const;
+private:
+	int m_Damage;
 };
 
 

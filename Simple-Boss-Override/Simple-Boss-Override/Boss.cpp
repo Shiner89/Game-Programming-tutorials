@@ -1,13 +1,16 @@
 #include "Boss.h"
 
-
-Boss::Boss() :
-	m_DamageMultiplier(3)
+Boss::Boss(int damage) :
+	Enemy(damage)            //call base class constructor with argument
 {}
 
-
-void Boss::SpecialAttack() const
+void Boss::Taunt() const     //override base class member function
 {
-	cout << "Special Attack inflicts " << (m_DamageMultiplier * m_Damage);
-	cout << " damage points!\n";
+	cout << "The boss says he will end your pitiful existence.\n";
+}
+
+void Boss::Attack() const    //override base class member function
+{
+	Enemy::Attack();         //call base class member function 
+	cout << " And laughs heartily at you.\n";
 }
