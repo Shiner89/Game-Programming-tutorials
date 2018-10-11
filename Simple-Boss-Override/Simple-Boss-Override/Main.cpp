@@ -12,7 +12,7 @@ int main()
 	Boss boss1;
 	boss1.Attack();
 	boss1.SpecialAttack();
-
+	cin.get();
 	return 0;
 }
 

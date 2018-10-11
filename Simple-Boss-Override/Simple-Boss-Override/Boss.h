@@ -13,9 +13,6 @@ public:
 
 };
 
-Boss::Boss() :
-	m_DamageMultiplier(3)
-{}
 
 
 #endif // !1

@@ -14,9 +14,7 @@ public:
 	void Attack() const;
 };
 
-Enemy::Enemy() :
-	m_Damage(10)
-{}
+
 
 #endif // !ENEMY_H
 
