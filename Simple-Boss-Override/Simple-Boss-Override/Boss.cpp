@@ -12,5 +12,5 @@ void Boss::Taunt() const     //override base class member function
 void Boss::Attack() const    //override base class member function
 {
 	Enemy::Attack();         //call base class member function 
-	cout << " And laughs heartily at you.\n";
+	cout << "\nHe laughs heartily at you.\n";
 }

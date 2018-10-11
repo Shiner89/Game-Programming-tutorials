@@ -1,5 +1,6 @@
 #include "Enemy.h"
 #include "Boss.h"
+#include "FinalBoss.h"
 
 
 int main()
@@ -13,6 +14,11 @@ int main()
 	Boss aBoss;
 	aBoss.Taunt();
 	aBoss.Attack();
+
+	cout << "\n\nFinal Boss object:\n";
+	FinalBoss fBoss;
+	fBoss.Taunt();
+	fBoss.Attack();
 
 	cin.get();
 	return 0;

@@ -1,2 +1,6 @@
-﻿  Main.cpp
+﻿  Boss.cpp
+  Enemy.cpp
+  FinalBoss.cpp
+  Main.cpp
+  Generating Code...
   Simple-Boss-Override.vcxproj -> C:\gp\tutorials\Game-Programming-tutorials\Simple-Boss-Override\Debug\Simple-Boss-Override.exe

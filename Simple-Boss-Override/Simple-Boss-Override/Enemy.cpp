@@ -3,6 +3,7 @@
 
 Enemy::Enemy(int damage) :
 	m_Damage(damage)
+	
 {}
 
 void Enemy::Taunt() const
